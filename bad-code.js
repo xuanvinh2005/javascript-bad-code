@@ -78,3 +78,29 @@ User.find({})
  });
 };
 module.exports = exports;
+
+
+function book(name,author,content,date) {
+  var name = name;
+  var author = author;
+  var content = content;
+  var date = date;
+
+  var self = { 
+    findWord: function(word) { 
+      return content.indexOf(word)>=0;
+    },
+    removeWord: function(word) { 
+      return content.indexOf(word)>=0?content.replace(word + ' ',''):content;
+    },
+    replaceWord: function(oldWord,newWord) { 
+      return content.indexOf(oldWord)>=0?content.replace(oldWord,newWord):content;
+    },
+    getName: function() {return name;},
+    getAuthor: function() {return author;},
+    getContent: function() {return content;},
+    getDate: function() {return date;}
+  };
+
+  return self;
+};
