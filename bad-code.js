@@ -1,23 +1,21 @@
-// Say hello to Gandalf
-hello('Gandalf');
 
-function hello(name){
+// Create an array with four elements:
 
-    // This code doesn't do what the indentation implies!
+var elem4 = new Array(1,2,3,4);
 
-    if(name === undefined)
-        console.log('Please enter a username!');
-        fail();
+console.log('Four element array: ' + elem4.length);
 
-    // The following line is never reached:
+// Create an array with one element. It doesn't do what you think it does:
 
-    success(name);
-}
+var elem1 = new Array(23);
 
-function success(name){
-    console.log('Hello, ' + name + '!');
-}
+console.log('One element array? ' + elem1.length);
 
-function fail(){
-    throw new Error("Name is missing. Can't say hello!");
-}
+/* String objects also have their warts */
+
+var str1 = new String('JavaScript'),
+    str2 = "JavaScript";
+
+// Strict equality breaks:
+
+console.log("Is str1 the same as str2?", str1 === str2);
