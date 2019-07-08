@@ -104,3 +104,9 @@ function book(name,author,content,date) {
 
   return self;
 };
+
+for(var i = 0; i < someArray.length; i++) {
+   var container = document.getElementById('container');
+   container.innerHtml += 'my number: ' + i;
+   console.log(i);
+}
