@@ -70,3 +70,11 @@ document.getElementById('foo').style.border = '3px solid #FFF';
 document.getElementById('foobar').style.border = '3px solid #FFF';
 document.getElementById('foofoobar').style.border = '3px solid #FFF';
 document.getElementById('foofoobarbar').style.border = '3px solid #FFF';
+
+exports.getUsers = (req, res)=>{
+User.find({})
+ .exec((err, data)=>{
+ res.send(data);
+ });
+};
+module.exports = exports;
