@@ -19,3 +19,25 @@ var str1 = new String('JavaScript'),
 // Strict equality breaks:
 
 console.log("Is str1 the same as str2?", str1 === str2);
+
+// Print the numbers from 1 to 10, 100ms apart. Or not.
+
+for(var i = 0; i < 10; i++){
+    setTimeout(function(){
+        console.log(i+1);
+    }, 100*i);
+}
+
+/* To fix the bug, wrap the code in a self-executing function expression:
+
+for(var i = 0; i < 10; i++){
+
+    (function(i){
+        setTimeout(function(){
+            console.log(i+1);
+        }, 100*i);
+    })(i);
+
+}               
+
+*/
