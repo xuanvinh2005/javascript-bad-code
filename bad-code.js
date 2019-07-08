@@ -4,7 +4,7 @@ var userData = {};
 
 // Fetch the location data for the current user.
 load();
-
+return;
 // Output the location of the user. Oops, it doesn't work! Why?
 console.log('Hello! Your IP address is ' + userData.ip + ' and your country is ' + userData.country_name);
 
